@@ -4,7 +4,7 @@ from .models import Customer, Order
 import africastalking
 
 # Initialize Africa's Talking
-africastalking.initialize(username="sandbox", api_key="your_africastalking_api_key")
+africastalking.initialize(username="sandbox", api_key="atsk_0f086f0ee29b6b7aeef81d11616f8791fe6b948e61cc55a8f6b8ceeed31e88744508a04d")
 sms = africastalking.SMS
 
 class CustomerType(DjangoObjectType):
@@ -43,7 +43,7 @@ class CreateOrder(graphene.Mutation):
         # Send SMS via Africa's Talking
         message = f"Hello {customer.name}, your order '{item}' has been placed successfully."
         try:
-            sms.send(message, ["+2547XXXXXXX"])  # replace with customer's phone number logic
+            sms.send(message, ["+254712962787"])  
         except Exception as e:
             print(f"Error sending SMS: {e}")
 
