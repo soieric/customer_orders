@@ -5,3 +5,4 @@ djangorestframework
 mozilla-django-oidc 
 africastalking 
 coverage
+python-decouple
